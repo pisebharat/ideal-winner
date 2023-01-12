@@ -1,0 +1,6 @@
+REM @echo off
+    del C:\NS1\Results.txt 2>nul
+    for /f "delims=" %%a in (C:\NS1\Servers.txt) do NSLOOKUP %%a >> C:\NS1\%date%.txt
+echo %date% >> C:\NS1\%date%.txt
+echo %time% >> C:\NS1\%date%.txt
+    exit
